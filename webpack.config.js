@@ -9,16 +9,16 @@ module.exports = {
     clean: true, // cleans up the /dist folder before build
   },
   module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
-      },
-    ],
-  },
+  rules: [
+    {
+      test: /\.js?$/,
+      exclude: /node_modules/,
+      use: {
+        loader: "babel-loader",
+      }
+    }
+  ]
+},
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
@@ -37,5 +37,6 @@ module.exports = {
   ],
   compress: true,
   port: 3000,
+  open: true,
 },
 };

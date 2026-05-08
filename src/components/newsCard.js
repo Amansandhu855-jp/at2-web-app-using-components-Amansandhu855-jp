@@ -1,37 +1,52 @@
 import React from "react";
 
-function NewsCard({ title, text, image, author, date }) {
+function NewsCard({
+  title,
+  date,
+  comments,
+  category,
+  description,
+  tagIcon,
+}) {
   return (
     <div className="item col-md-4">
-      <div className="image">
-        <a href="#">
-          <span className="btn btn-default">
-            <i className="fa fa-file-o"></i> Read More
-          </span>
-        </a>
-
-        <img src={image} alt={title} />
-      </div>
 
       <div className="tag">
-        <i className="fa fa-file-text"></i>
+        <i className={`fa ${tagIcon}`}></i>
       </div>
 
       <div className="info-blog">
-        <span className="title">{title}</span>
 
-        <span className="text">{text}</span>
+        <ul
+          className="top-info"
+          style={{ marginTop: "20px" }}
+        >
 
-        <span className="meta">
-          <span className="author">
-            <i className="fa fa-user"></i> {author}
-          </span>
+          <li>
+            <i className="fa fa-calendar"></i> {date}
+          </li>
 
-          <span className="date">
-            <i className="fa fa-clock-o"></i> {date}
-          </span>
-        </span>
+          <li>
+            <i className="fa fa-comments-o"></i> {comments}
+          </li>
+            <div
+              className="news-category"
+               style={{ marginTop: "5px" }}
+              >
+               <i className="fa fa-tags"></i> {category}
+              </div>
+        </ul>
+
+      
+
+        <h3 className="news-title">
+          <a href="#">{title}</a>
+        </h3>
+
+        <p>{description}</p>
+
       </div>
+
     </div>
   );
 }

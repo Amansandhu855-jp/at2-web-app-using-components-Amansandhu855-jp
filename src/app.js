@@ -1,23 +1,56 @@
 import React from "react";
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
 import Regions from "./pages/Regions";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
-import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div id="wrapper">
-      <Header />
+    <BrowserRouter>
 
-      <Home />
-      <Regions />
-      <News />
-      <Contact />
+      <div id="wrapper">
 
-      <Footer />
-    </div>
+        <Header />
+
+        <Routes>
+
+          <Route
+            path="/"
+            element={<Home />}
+          />
+
+          <Route
+            path="/regions"
+            element={<Regions />}
+          />
+
+          <Route
+            path="/news"
+            element={<News />}
+          />
+
+          <Route
+            path="/contact"
+            element={<Contact />}
+          />
+
+        </Routes>
+
+        <Footer />
+
+      </div>
+
+    </BrowserRouter>
   );
 }
 
