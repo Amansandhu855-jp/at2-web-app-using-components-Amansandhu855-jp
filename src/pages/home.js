@@ -18,6 +18,8 @@ function Home() {
             <div className="form-group">
               <div className="form-control-small">
                 <input
+                id="arrival"
+                name="arrival"
                   type="text"
                   className="form-control"
                   placeholder="Arrive on..."
@@ -25,7 +27,7 @@ function Home() {
               </div>
 
               <div className="form-control-small">
-                <select className="form-control">
+                <select  id="stay" name="stay"className="form-control">
                   <option>Stay...</option>
                   <option>1 Night</option>
                   <option>2 Nights</option>
@@ -34,7 +36,7 @@ function Home() {
               </div>
 
               <div className="form-control-small">
-                <select className="form-control">
+                <select  id="bedrooms" name="bedrooms"className="form-control">
                   <option>Bedrooms</option>
                   <option>1</option>
                   <option>2</option>
@@ -44,6 +46,8 @@ function Home() {
 
               <div className="form-control-large">
                 <input
+                 id="location"
+                 name="location"
                   type="text"
                   className="form-control"
                   placeholder="City, State, Country, etc..."
