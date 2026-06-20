@@ -1,5 +1,5 @@
 import React from "react";
-import NewsData from "../data/newsData";
+import NewsData from "../data/NewsData";
 import NewsCard from "../components/NewsCard";
 
 function News() {

@@ -72,12 +72,15 @@ function Home() {
 
           <div className="grid-style1 clearfix">
             {properties.map((property) => (
-              <PropertyCard
-                key={property.id}
-                price={property.price}
-                bedrooms={property.bedrooms}
-                bathrooms={property.bathrooms}
-              />
+            <PropertyCard
+             key={property.id}
+             title={property.title}
+             location={property.location}
+             price={property.price}
+             image={property.image}
+             bedrooms={property.bedrooms}
+             bathrooms={property.bathrooms}
+             />
             ))}
           </div>
         </section>
