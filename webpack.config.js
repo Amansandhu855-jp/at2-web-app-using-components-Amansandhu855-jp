@@ -1,42 +1,50 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { homepage } = require("./package.json");
 
-module.exports = {
-  entry: "./src/index.js",
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
-    clean: true, // cleans up the /dist folder before build
-  },
-  module: {
-  rules: [
-    {
-      test: /\.js?$/,
-      exclude: /node_modules/,
-      use: {
-        loader: "babel-loader",
-      }
-    }
-  ]
-},
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./public/index.html",
-    }),
-  ],
- devServer: {
-  static: [
-    {
-      directory: path.join(__dirname, "public"),
-      publicPath: "/",
+const homepagePath = homepage ? new URL(homepage).pathname : "/";
+
+module.exports = (_, argv = {}) => {
+  const isProd = argv.mode === "production";
+  const publicUrl = process.env.PUBLIC_URL ?? (isProd ? homepagePath : "/");
+
+  return {
+    entry: "./src/index.js",
+    output: {
+      filename: "[name].[contenthash].js", // better caching
+      path: path.resolve(__dirname, "dist"),
+      clean: true, // clean dist on build
+      publicPath: publicUrl, // critical for GH Pages
     },
-    {
-      directory: path.join(__dirname, "dist"),
-      publicPath: "/",
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: { loader: "babel-loader" },
+        },
+        {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+        },
+        {
+          test: /\.(png|jpg|jpeg|gif|svg)$/i,
+          type: "asset/resource",
+        },
+      ],
     },
-  ],
-  compress: true,
-  port: 3000,
-  open: true,
-},
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: "./public/index.html",
+      }),
+    ],
+    devServer: {
+      static: {
+        directory: path.join(__dirname, "dist"),
+      },
+      compress: true,
+      port: 3000,
+      historyApiFallback: true,
+    },
+  };
 };

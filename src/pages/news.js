@@ -12,8 +12,8 @@ function News() {
 
         <div className="grid-style1 row">
 
-          {ewsData.map((news) => (
-            
+          {NewsData.map((news) => (
+
             <NewsCard
               key={news.id}
               date={news.date}
