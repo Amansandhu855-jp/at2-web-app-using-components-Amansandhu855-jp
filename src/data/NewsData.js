@@ -1,4 +1,4 @@
-const newsData = [
+const NewsData = [
   {
     id: 1,
     date: "July 30, 2014",
@@ -36,4 +36,4 @@ const newsData = [
   },
 ];
 
-export default newsData;
+export default NewsData;

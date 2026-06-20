@@ -1,4 +1,4 @@
-const activityData = [
+const ActivityData = [
   {
     id: 1,
     image: "/images/comment-man.jpg",
@@ -20,4 +20,4 @@ const activityData = [
   },
 ];
 
-export default activityData;
+export default ActivityData;

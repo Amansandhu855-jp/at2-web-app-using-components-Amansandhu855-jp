@@ -1,5 +1,5 @@
 //List of properties
-const properties = [
+const Properties = [
 	{
 		id: 0,
 		Title: "Beautiful Family Home",
@@ -56,4 +56,4 @@ const properties = [
 	},
 
 ];
-export default properties;
+export default Properties;
