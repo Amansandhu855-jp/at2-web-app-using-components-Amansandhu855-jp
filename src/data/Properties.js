@@ -4,7 +4,7 @@ const Properties = [
 		id: 0,
 		Title: "Beautiful Family Home",
 		location: "Rivendell",
-		image: "https://placehold.co/760x670",
+		image: "",
   		price: "$950",
   		bedrooms: 4,
   		bathrooms: 2
