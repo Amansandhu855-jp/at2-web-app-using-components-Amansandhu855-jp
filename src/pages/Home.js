@@ -72,7 +72,7 @@ function Home() {
           <h1 className="section-title">Featured Properties</h1>
 
           <div className="grid-style1 clearfix">
-            {properties.map((property) => (
+            {Properties.map((property) => (
             <PropertyCard
              key={property.id}
              title={property.title}
