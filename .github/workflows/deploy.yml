@@ -27,7 +27,7 @@ jobs:
 
       - name: Build React app
         run: npm run build
-        - name: Copy public assets
+      - name: Copy public assets
         run: |
           mkdir -p dist/public
           cp -r public/css dist/public/css
