@@ -16,7 +16,7 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/at2-web-app-using-components-Amansandhu855-jp">
 
       <div id="wrapper">
 
