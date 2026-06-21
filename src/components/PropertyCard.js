@@ -8,7 +8,7 @@ function PropertyCard({ title, location, price, image, bedrooms, bathrooms }) {
           <h3>{title}</h3>
           <span className="location">{location}</span>
         </a>
-        <img src={image} alt={title} />
+        <img src={image}  />
       </div>
 
       <div className="price">
