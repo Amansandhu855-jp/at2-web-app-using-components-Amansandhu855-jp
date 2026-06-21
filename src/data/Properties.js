@@ -4,11 +4,7 @@ const Properties = [
 		id: 0,
 		Title: "Beautiful Family Home",
 		location: "Rivendell",
-<<<<<<< HEAD
-		image: "https://placehold.co/",
-=======
 		image: "",
->>>>>>> d93e6a5dda9becf9914cc0cad009c72ef353ba1d
   		price: "$950",
   		bedrooms: 4,
   		bathrooms: 2
@@ -17,7 +13,7 @@ const Properties = [
 		"id": 1,
 		title: "Modern Apartment",
 		location: "Minas Tirith",
-		image: "public/images/properties/property2.jpg",	
+		image: "",	
 	    price: "$1300",
   		bedrooms: 3,
   		bathrooms: 2
@@ -26,7 +22,7 @@ const Properties = [
 		"id": 2,
 		title: "Cozy Cottage",
 		location: "Shire",
-		image: "public/images/properties/property3.jpg",
+		image: "",
 		price: "$560",
   		bedrooms: 1,
   		bathrooms: 2
@@ -35,7 +31,7 @@ const Properties = [
 		"id": 3,
 		title: "Luxury Villa",
 		location: "Hobbiton",
-		image: "public/images/properties/property4.jpg",
+		image: "",
 		price: "$85",
   		bedrooms: 2,
   		bathrooms: 2
@@ -44,7 +40,7 @@ const Properties = [
 		"id": 4,
 		title: "Charming Bungalow",
 		location: "Gondor",
-		image: "public/images/properties/property5.jpg",	
+		image: "",	
 		price: "$840",
   		bedrooms: 2,
   		bathrooms: 2
@@ -53,7 +49,7 @@ const Properties = [
 		"id": 5,
 		title: "Seaside Retreat",
 		location: "Mordor",
-		image: "images/properties/property6.jpg",	
+		image: "",	
 		price: "$150",
   		bedrooms: 2,
   		bathrooms: 2
