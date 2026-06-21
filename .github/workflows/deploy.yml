@@ -27,9 +27,17 @@ jobs:
 
       - name: Build React app
         run: npm run build
+        - name: Copy public assets
+        run: |
+          mkdir -p dist/public
+          cp -r public/css dist/public/css
+          cp -r public/images dist/public/images
+          cp -r public/fonts dist/public/fonts
+          cp public/favicon.ico dist/public/favicon.ico
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          
