@@ -32,7 +32,7 @@ function Header() {
           <div className="row">
             <div className="col-sm-12">
               <a href="#" className="nav-logo">
-                <img src="/images/logo.png" alt="One Ring Rentals" />
+                <img src="images/logo.png" alt="One Ring Rentals" />
               </a>
 
               <nav className="navbar">
