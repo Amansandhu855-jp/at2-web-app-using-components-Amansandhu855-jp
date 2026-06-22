@@ -15,8 +15,12 @@ import News from "./pages/News";
 import Contact from "./pages/Contact";
 
 function App() {
+    const basename =
+    process.env.NODE_ENV === "production"
+      ? "/at2-web-app-using-components-Amansandhu855-jp"
+      : "/";
   return (
-    <BrowserRouter basename="/at2-web-app-using-components-Amansandhu855-jp">
+     <BrowserRouter basename={basename}>
 
       <div id="wrapper">
 

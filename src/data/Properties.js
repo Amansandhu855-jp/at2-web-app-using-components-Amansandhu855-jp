@@ -4,7 +4,7 @@ const Properties = [
 		id: 0,
 		Title: "Beautiful Family Home",
 		location: "Rivendell",
-		image: "",
+		image: null,
   		price: "$950",
   		bedrooms: 4,
   		bathrooms: 2
@@ -13,7 +13,7 @@ const Properties = [
 		"id": 1,
 		title: "Modern Apartment",
 		location: "Minas Tirith",
-		image: "",	
+		image:null,	
 	    price: "$1300",
   		bedrooms: 3,
   		bathrooms: 2
@@ -22,7 +22,7 @@ const Properties = [
 		"id": 2,
 		title: "Cozy Cottage",
 		location: "Shire",
-		image: "",
+		image: null,
 		price: "$560",
   		bedrooms: 1,
   		bathrooms: 2
@@ -31,7 +31,7 @@ const Properties = [
 		"id": 3,
 		title: "Luxury Villa",
 		location: "Hobbiton",
-		image: "",
+		image: null,
 		price: "$85",
   		bedrooms: 2,
   		bathrooms: 2
@@ -40,7 +40,7 @@ const Properties = [
 		"id": 4,
 		title: "Charming Bungalow",
 		location: "Gondor",
-		image: "",	
+		image: null,	
 		price: "$840",
   		bedrooms: 2,
   		bathrooms: 2
@@ -49,7 +49,7 @@ const Properties = [
 		"id": 5,
 		title: "Seaside Retreat",
 		location: "Mordor",
-		image: "",	
+		image: null,	
 		price: "$150",
   		bedrooms: 2,
   		bathrooms: 2
