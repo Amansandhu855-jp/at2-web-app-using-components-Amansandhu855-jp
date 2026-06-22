@@ -2,7 +2,7 @@
 const Properties = [
 	{
 		id: 0,
-		Title: "Beautiful Family Home",
+		title: "Beautiful Family Home",
 		location: "Rivendell",
 		image: null,
   		price: "$950",
