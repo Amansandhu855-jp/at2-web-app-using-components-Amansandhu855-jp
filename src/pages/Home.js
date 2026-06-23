@@ -5,7 +5,8 @@ import Properties from "../data/Properties";
 import ActivityCard from "../components/ActivityCard";
 import ActivityData from "../data/ActivityData";
 import Regions from "./Regions";
-import News from "./News";
+import NewsData from "../data/NewsData";
+import NewsCard from "../components/NewsCard";
 import Carousel from "../components/Carousel";
 import LatestDeals from "../data/LatestDeals";
 import LatestDealsCard from "../components/LatestDealsCard";
@@ -92,9 +93,38 @@ function Home() {
           <Regions />
         </section>
 
-        <section>
-          <News />
-        </section>
+            <section className="content">
+
+        <h1 className="section-title">
+          Recent Articles
+        </h1>
+
+        <div className="grid-style1 row">
+
+          {NewsData.map((news) => (
+
+            <NewsCard
+              key={news.id}
+              date={news.date}
+              comments={news.comments}
+              title={news.title}
+              category={news.category}
+              image={news.image}
+              description={news.description}
+              tagIcon={news.tagIcon}
+            />
+          ))}
+
+        </div>
+
+        <div className="center">
+          <a href="#" className="btn btn-default-color">
+            View All News
+          </a>
+        </div>
+
+      
+    </section>
       </div>
 
       <aside className="sidebar col-sm-4">
