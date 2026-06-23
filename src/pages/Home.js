@@ -7,6 +7,7 @@ import ActivityData from "../data/ActivityData";
 import Regions from "./Regions";
 import News from "./News";
 import Carousel from "../components/Carousel";
+import LatestDeals from "../data/LatestDeals";
 
 function Home() {
   return (
@@ -100,71 +101,23 @@ function Home() {
 
         <ul className="latest-news">
 
-                <li className="col-md-12">
-                  
+                {LatestDeals.map((deal, index) => (
+                <li className="col-md-12" key={index}>
+                 <ul className="top-info">
+                 <li>
+                <i className="fa fa-calendar"></i> {deal.available}
+              </li>
+             </ul>
 
-                  <ul className="top-info">
-                    <li>
-                      <i className="fa fa-calendar"></i> Available Now
-                    </li>
-                  </ul>
+            <h4>
+            <a href="#">{deal.title}</a>
+           </h4>
 
-                  <h4>
-                    <a href="#">Private Beach</a>
-                    <p style={{ whiteSpace: "nowrap" }}>
-                       Lossarnach, Eriador
-                    </p>
-                  </h4>
-                </li>
-
-                <li className="col-md-12">
-                  <ul className="top-info">
-                    <li>
-                      <i className="fa fa-calendar"></i> Available on 24 July
-                    </li>
-                  </ul>
-
-                  <h4>
-                    <a href="#">Mountain Views</a>
-                  </h4>
-
-                  <p style={{ whiteSpace: "nowrap" }}>
-                       Hyarnustar, Rhovanion
-                    </p>
-                </li>
-
-                <li className="col-md-12">
-                  <ul className="top-info">
-                    <li>
-                      <i className="fa fa-calendar"></i> Available 5 July
-                    </li>
-                  </ul>
-
-                  <h4>
-                    <a href="#">Heart of the village</a>
-                  </h4>
-
-                  <p style={{ whiteSpace: "nowrap" }}>
-                       Minhiriath, Eriador
-                    </p>
-                </li>
-
-                <li className="col-md-12">
-                  <ul className="top-info">
-                    <li>
-                      <i className="fa fa-calendar"></i> Available 6 July
-                    </li>
-                  </ul>
-
-                  <h4>
-                    <a href="#">The city life</a>
-                  </h4>
-
-                  <p style={{ whiteSpace: "nowrap" }}>
-                       West Beleriand, Mordor
-                    </p>
-                </li>
-
+             <p style={{ whiteSpace: "nowrap" }}>
+              {deal.location}
+            </p>
+            </li>
+              ))}
               </ul>
               <div className="center">
                 <a href="#" className="btn btn-fullcolor">
