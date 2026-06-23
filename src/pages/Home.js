@@ -8,6 +8,7 @@ import Regions from "./Regions";
 import News from "./News";
 import Carousel from "../components/Carousel";
 import LatestDeals from "../data/LatestDeals";
+import LatestDealsCard from "../components/LatestDealsCard";
 
 function Home() {
   return (
@@ -101,23 +102,14 @@ function Home() {
 
         <ul className="latest-news">
 
-                {LatestDeals.map((deal, index) => (
-                <li className="col-md-12" key={index}>
-                 <ul className="top-info">
-                 <li>
-                <i className="fa fa-calendar"></i> {deal.available}
-              </li>
-             </ul>
-
-            <h4>
-            <a href="#">{deal.title}</a>
-           </h4>
-
-             <p style={{ whiteSpace: "nowrap" }}>
-              {deal.location}
-            </p>
-            </li>
-              ))}
+                {LatestDeals.map((deal) => (
+                <LatestDealsCard
+                 key={deal.id}
+                 available={deal.available}
+                 title={deal.title}
+                 location={deal.location}
+                />
+                ))}
               </ul>
               <div className="center">
                 <a href="#" className="btn btn-fullcolor">
