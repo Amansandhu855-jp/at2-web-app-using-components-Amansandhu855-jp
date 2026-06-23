@@ -4,11 +4,11 @@ import PropertyCard from "../components/PropertyCard";
 import Properties from "../data/Properties";
 import ActivityCard from "../components/ActivityCard";
 import ActivityData from "../data/ActivityData";
-import Regions from "./Regions";
 import NewsData from "../data/NewsData";
 import NewsCard from "../components/NewsCard";
 import Carousel from "../components/Carousel";
 import LatestDeals from "../data/LatestDeals";
+import Regions from "../data/Regions";
 import LatestDealsCard from "../components/LatestDealsCard";
 
 function Home() {
@@ -89,11 +89,25 @@ function Home() {
           </div>
         </section>
 
-        <section>
-          <Regions />
+       <section>
+            <div>
+               <h1 className="section-title">
+                 Popular Regions
+               </h1>
+
+             <div id="regions">
+              {Regions.map((region) => (
+             <div className="item" key={region.id}>
+              <a href="#">
+               <h3>{region.name}</h3>
+              </a>
+             </div>
+              ))}
+               </div>
+            </div>
         </section>
 
-            <section className="content">
+        <section className="content">
 
         <h1 className="section-title">
           Recent Articles
