@@ -4,18 +4,17 @@ function PropertyCard({ title, location, price, image, bedrooms, bathrooms }) {
   return (
     <div className="item col-md-4">
       <div className="image">
-        <a href="#">
+        <a href="/">
           <h3>{title}</h3>
           <span className="location">{location}</span>
         </a>
-        <img src={image}  />
       </div>
 
       <div className="price">
         <span>{price}</span>
         <p>per night</p>
       </div>
-
+      <img src={image}  />
       <ul className="amenities">
         <li>
           <i className="icon-bedrooms"></i> {bedrooms}
