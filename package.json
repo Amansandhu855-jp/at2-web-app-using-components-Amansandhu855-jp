@@ -5,8 +5,7 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production && npm run copy-public",
-    "copy-public": "copyfiles -u 1 \"public/**/*\" dist",
-    "predeploy": "npm run build",
+    "copy-public": "copyfiles -u 1 \"public/css/**/*\" \"public/images/**/*\" \"public/fonts/**/*\" \"public/favicon.ico\" dist",
     "deploy": "gh-pages -d dist",
     "lint": "eslint ."
   },
