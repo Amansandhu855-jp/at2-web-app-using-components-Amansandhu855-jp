@@ -1,7 +1,7 @@
 const ActivityData = [
   {
     id: 1,
-    image: "public/images/comment-man.jpg",
+    image:"images/comment-man.jpg",
     name: "Sam Minnée",
     property: "The House With No Windows",
     message:
@@ -11,7 +11,7 @@ const ActivityData = [
 
   {
     id: 2,
-    image: "public/images/comment-woman.jpg",
+    image: "images/comment-woman.jpg",
     name: "Ingo Schoomer",
     property: "The Mistake by the Lake",
     message:

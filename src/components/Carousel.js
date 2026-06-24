@@ -16,7 +16,7 @@ function Carousel() {
           id="slide1"
           style={{
             background:
-              "url(public/images/patterns/pattern1.jpg) no-repeat left center",
+              "url(images/patterns/pattern1.jpg) no-repeat left center",
             backgroundSize: "cover",
           }}
         >
@@ -48,7 +48,7 @@ function Carousel() {
           id="slide2"
           style={{
             background:
-              "url(public/images/patterns/pattern1.jpg) no-repeat left center",
+              "url(images/patterns/pattern1.jpg) no-repeat left center",
             backgroundSize: "cover",
           }}
         >
