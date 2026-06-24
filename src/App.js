@@ -13,7 +13,6 @@ import Home from "./pages/Home";
 import Regions from "./pages/Regions";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
-
 function App() {
     const basename =
     process.env.NODE_ENV === "production"
